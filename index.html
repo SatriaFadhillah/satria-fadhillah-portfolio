@@ -76,10 +76,21 @@ background-color: #fff;
 Contact Me
 </a>
 
-<!-- Mobile Menu Icon -->
-<button class="md:hidden text-white">
+<!-- Mobile Menu Toggle -->
+<button id="mobile-menu-btn" class="md:hidden text-white p-1">
 <iconify-icon icon="lucide:menu" width="24" stroke-width="1.5"></iconify-icon>
 </button>
+</div>
+
+<!-- Mobile Menu Panel -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-neutral-950/95 backdrop-blur-md">
+<div class="px-6 py-6 space-y-4">
+<a href="#about" class="block text-sm font-medium text-neutral-300 hover:text-white transition-colors">About</a>
+<a href="#skills" class="block text-sm font-medium text-neutral-300 hover:text-white transition-colors">Skills</a>
+<a href="#learning" class="block text-sm font-medium text-neutral-300 hover:text-white transition-colors">Learning</a>
+<a href="#projects" class="block text-sm font-medium text-neutral-300 hover:text-white transition-colors">Experience</a>
+<a href="#contact" class="block text-sm font-medium bg-white text-black text-center px-6 py-2.5 rounded-full hover:bg-neutral-200 transition-all mt-4">Contact Me</a>
+</div>
 </div>
 </nav>
 
@@ -501,4 +512,10 @@ satriafadhillah.cs@gmail.com
 </main>
 
 
+<script>
+document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+  var menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
+</script>
 </body></html>
